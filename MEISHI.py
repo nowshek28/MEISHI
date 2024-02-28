@@ -29,6 +29,6 @@ if __name__ == "__main__":
     image_name = "card.png"
     script_directory = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(script_directory, image_name)
-    img = cv2.imread(f"{file_path}")
+    img = cv2.imread(file_path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     read_text(img)
