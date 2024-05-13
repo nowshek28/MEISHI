@@ -11,19 +11,20 @@ def read_text(img):
     result = reader.readtext(img)
     print(result)
     for data in result:
-        print(data[0])
+        #print(data[0])
         bbox = data[0]
         # Draw a rectangle on the image
         cv2.rectangle(img, (int(bbox[0][0]), int(bbox[0][1])), (int(bbox[1][0]), int(bbox[1][1])), (0, 255, 0), 1)
         
 
     # Display the image
-    plt.imshow(img)
+    """plt.imshow(img)
     plt.axis('off')  # Turn off the axis labels
-    plt.show()
+    plt.show()"""
 
 
     #print(result[0][0])
+    return img
 
 if __name__ == "__main__":
     image_name = "card.png"
