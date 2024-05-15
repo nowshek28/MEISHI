@@ -9,13 +9,13 @@ def read_text(img):
 
     # Extract text from the image
     result = reader.readtext(img)
-    print(result)
-    for data in result:
+    
+    """for data in result:
         #print(data[0])
         bbox = data[0]
         # Draw a rectangle on the image
         cv2.rectangle(img, (int(bbox[0][0]), int(bbox[0][1])), (int(bbox[1][0]), int(bbox[1][1])), (0, 255, 0), 1)
-        
+       """ 
 
     # Display the image
     """plt.imshow(img)
@@ -24,7 +24,7 @@ def read_text(img):
 
 
     #print(result[0][0])
-    return img
+    return result
 
 if __name__ == "__main__":
     image_name = "card.png"
