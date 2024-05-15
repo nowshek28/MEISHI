@@ -1,4 +1,0 @@
-light to bed = 4.2cm
-camera to light = 2.4cm
-height of th elight = 1.82, 6.09cm
-thickness of the plate is 0.3cm
