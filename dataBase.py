@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 def connectDB(user, password, data):
     # Replace the uri string with your MongoDB deployment's connection string.
-    client = MongoClient(f'mongodb+srv://{user}:{password}@mernapp.fog5yml.mongodb.net/?retryWrites=true&w=majority&appName=MERNapp')
+    client = MongoClient(f'mongodb+srv://{user}:{password}@mernapp.fog5yml.mongodb.net/?retryWrites=true&w=majority&appName=MERN')
 
     # Connect to the database (will be created if it doesn't exist)
     db = client['CARDdata']
