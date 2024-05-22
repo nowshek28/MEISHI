@@ -18,6 +18,7 @@ def DATA_Seperator(data):
             card_data['WEBSITE'] = item
         elif '@' in item:
             card_data['EMAIL'] = item
+            card_data['NAME'] = item[:item.index('@')]
         elif 'group' in item or 'Group' in item:
             card_data['COMAPANY GROUP'] = item
         elif 'japan' in item.lower():
@@ -40,6 +41,7 @@ def DATA_Seperator(data):
 
 
     print(card_data)
+    return card_data
             
 
 

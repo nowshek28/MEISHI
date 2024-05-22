@@ -2,9 +2,16 @@ import cv2
 import matplotlib.pyplot as plt
 import os
 import easyocr
+from dotenv import load_dotenv
 from DATA_Seprator import DATA_Seperator
+from dataBase import connectDB
 
 def find_card(image):
+
+    # Load environment variables from the .env file
+    load_dotenv()
+    user = os.getenv('user')
+    password = os.getenv('password')
     img = cv2.imread(image)
     # Display the image
     Card_data = []
@@ -46,14 +53,16 @@ def find_card(image):
             Card_data.append(data[1])
         
     #print(Card_data)
-    DATA_Seperator(Card_data)
+    DataBase = DATA_Seperator(Card_data)
+    connectDB(user, password, DataBase)
     # Display the image
     plt.imshow(img)
     plt.axis('off')
     plt.show()
 
 if __name__ == "__main__":
-    image_name = "card.jpg"
+    
+    image_name = "card1.jpg"
     script_directory = 'C:\\Users\\abhishek\\Desktop'
     file_path = os.path.join(script_directory, image_name)
     find_card(file_path)
